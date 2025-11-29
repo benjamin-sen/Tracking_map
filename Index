@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ma carte GPX</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2atfFjH0kLE/6YxZLJ8ZtOIW0ZsHf0zP2G8p3Gk="
+    crossorigin=""
+  />
+
+  <!-- Style de la carte -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o3Pf1VtWf0cI1E9dNh4zQF3bQnZMt6vNMRR2CNC2YRc="
+    crossorigin=""
+  ></script>
+
+  <!-- Leaflet GPX plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
+  <!-- Ton script -->
+  <script src="script.js"></script>
+</body>
+</html>
