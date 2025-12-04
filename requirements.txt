@@ -1,4 +1,0 @@
-fastapi
-uvicorn
-annotated-doc
-python-multipart
