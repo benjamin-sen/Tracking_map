@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carte de ma traversée en voilier</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <!-- Notre style -->
+  <link rel="stylesheet" href="style.css?v=10" />
+</head>
+<body>
+  <div id="title">Navigation — Benjamin Senften 2025</div>
+  <div id="map"></div>
+
+  <div id="media-panel">
+    <form id="media-form">
+      <h2>Ajouter un média</h2>
+      <p id="media-position"></p>
+
+      <label for="media-title">Titre</label>
+      <input type="text" id="media-title" name="title" placeholder="Ex : Grain au large des Açores" />
+
+      <label for="media-description">Description</label>
+      <textarea id="media-description" name="description" rows="3" placeholder="Quelques mots sur ce moment..."></textarea>
+
+      <label for="media-file">Fichier (image ou vidéo)</label>
+      <input type="file" id="media-file" name="file" accept="image/*,video/*" />
+
+      <div class="media-buttons">
+        <button type="submit">Enregistrer</button>
+        <button type="button" id="media-cancel">Annuler</button>
+      </div>
+
+      <p id="media-status"></p>
+    </form>
+  </div>
+
+  <!-- Lightbox pour afficher une image en grand (EN DEHORS de media-panel) -->
+  <div id="media-lightbox">
+    <div class="media-lightbox-content">
+      <span id="media-lightbox-close">&times;</span>
+      <img id="media-lightbox-img" src="" alt="" />
+      <div id="media-lightbox-caption"></div>
+    </div>
+  </div>
+
+    <form id="media-form">
+      <h2>Ajouter un média</h2>
+      <p id="media-position"></p>
+
+      <label for="media-title">Titre</label>
+      <input type="text" id="media-title" name="title" placeholder="Ex : Grain au large des Açores" />
+
+      <label for="media-description">Description</label>
+      <textarea id="media-description" name="description" rows="3" placeholder="Quelques mots sur ce moment..."></textarea>
+
+      <label for="media-file">Fichier (image ou vidéo)</label>
+      <input type="file" id="media-file" name="file" accept="image/*,video/*" />
+
+      <div class="media-buttons">
+        <button type="submit">Enregistrer</button>
+        <button type="button" id="media-cancel">Annuler</button>
+      </div>
+
+      <p id="media-status"></p>
+    </form>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <!-- Plugin pour charger des GPX -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
+  <button id="reset-view">Recentrer la carte</button>
+
+  <!-- Notre code -->
+  <script src="script.js?v=10"></script>
+</body>
+</html>
